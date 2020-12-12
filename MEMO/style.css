@@ -1,99 +1,107 @@
-
 body {
-    margin: 0;
-    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
-header {
-    height: 50px;
-    width: 100%;
-    background-color: #999797;
-    position: relative;
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+li {
+    margin: 0 20px;
+    background-color: #6C757D;
+    padding: 10px;
+    color: white;
+    border-radius: 8px;
+}
+li:hover {
+    cursor: pointer;
+}
+h1 {
     text-align: center;
+    background-color: #6C757D;
+    margin: 0;
+    font-size: 3em; 
+    padding: 20px;
+    color: white;
 }
 
-/* .topbtn{
-    display: block;
-    margin : auto;
-    background-color: green;
-    border: none;
-    margin-top: 3px;
-    border-radius: 10%;
-} */
+h3 {
+    font-size: 1.5em; 
+}
 
+.btnGreen{
+    background: green;
+    border-radius: 4px;
+    padding: 10px;
+}
+.btnJavascript{
+    background: rgb(255, 217, 4);
+    color: black;
+}
+
+.reponse{
+    font-size: 16px;
+}
+
+.user{
+    margin-left: 50px;
+    color: rgb(5, 190, 5);
+}
+
+.btnLearning{
+    display: flex;
+    align-items: center;
+}
+.btnPlus{
+    height: 20px;
+    background: green;
+    color: white;
+    border: none;
+    margin-right: 5px;
+    
+}
+.btnPlus:hover{
+    background: rgba(0, 128, 0, 0.753);
+}
+
+.setting{
+    display: flex;
+    float: right;
+    justify-content: center;
+    align-items: start;
+}
 main {
     display: flex;
     justify-content: space-around;
 }
-
 main > section {
-   flex-basis: 21%;
+    flex-basis: 20%;
 }
-
 article {
     background-color: #6C757D;
-    padding: 15px;
+    padding: 20px 30px; 
     color: white;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    border-radius: 4px;  
 }
-
-h3 {
-    font-size: 1.5em;
-}
-
-h1{
-    text-align: center;
-    background-color: #6C757D;
-    font-size: 3em;
-    margin: 0;
-    padding: 20px;
-}
-
-ul {
-    display: flex;
-    justify-content: center;
-    list-style:none;
-    text-align: center;
-}
-
 button {
-    background: #ffc107;
-    border-radius: 8px;
+    background-color: #ffc107;
+    border-radius: 3px;
 }
 
-/* .theme{
-    background-color: rgb(128, 128, 128);
-    border-radius: 8px;
-    color: white;
-} */
-
-li {
-    margin: 0 20px;
-    background-color: #6C757D;
-   padding: 10px;
-   color: white;
+button:hover{
+    background-color: #ffc107a9;
 }
 
-section {
-    max-width: 740px;
-    margin: 0 auto;
-    display: flex;
+button:active{
+    border: none;
 }
 
-/* .flex-item {
-    margin: 10px;
-    flex-grow: 1;
-    width: 50px;
-} */
-
-
-footer{
+footer {
     background-color:  #6C757D;
     padding: 20px;
     text-align: center;
-}
-
-footer a{
     color: white;
+    bottom: 0;
+    width: 100%;
 }
