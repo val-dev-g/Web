@@ -1,0 +1,36 @@
+.bg1 {
+    /* The image used */
+    background-image: url("https://static.sscontent.com/prodimg/thumb/1000/1000/products/124/v868251_prozis_squizz-fruit-puree-apple-strawberry-banana-100-g_newin.jpg");
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .bg2 {
+    background-image: url("https://static.sscontent.com/prodimg/thumb/1000/1000/products/124/v874503_prozis_gluten-free-brown-teff-flour-250-g_newin.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .bg3 {
+    background-image: url("https://static.sscontent.com/prodimg/thumb/1000/1000/products/124/v868323_prozis_squizz-100-organic-fruit-puree-apple-strawberry-raspberry-100-g_newin.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .bg4 {
+    background-image: url("https://static.sscontent.com/prodimg/thumb/1000/1000/products/124/v868331_prozis_squizz-superfood-fruit-puree-acai-pomegranate-raspberry-apple100-g_newin.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
