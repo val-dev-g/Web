@@ -1,10 +1,11 @@
 import CoopDom from "../CoopDom.js";
 export default class Card extends CoopDom {
-    constructor(question, answer, column) {
+    constructor(question, answer, column, added = false) {
         super();
         this.question = question;
         this.answer = answer;
         this.column = column;
+        this.added = added;
         
         // construction du dom de la carte
         this.domElements = this.render();
@@ -20,9 +21,24 @@ export default class Card extends CoopDom {
             this.column.removeCard(this);
         }
 
-        // affichage du formulaire au click sur le bouton modifier
+        // Affichage du formulaire au click sur le bouton modifier
         this.domElements.button_edit.onclick = () => {
             this.domElements.form_edit.hidden = false;
+        }
+
+        // Bouton valider  
+        this.domElements.button_submit_edit.onclick = (event) => {
+            console.log("Je clique sur le fucking bouton");
+            event.preventDefault();
+            const new_question = this.domElements.input_question.value;
+            const new_answer = this.domElements.input_answer.value;
+
+            this.domElements.question.textContent = new_question;
+            this.domElements.answer.textContent = new_answer;
+            this.domElements.form_edit.hidden = true;
+            this.domElements.question.hidden = false;
+            this.domElements.answer.hidden = true;
+            this.domElements.button_edit.hidden = false;
         }
 
         // Affichage / Cacher la réponse en cliquant sur le bouton
@@ -137,6 +153,17 @@ export default class Card extends CoopDom {
             article,
             {"class": "btn btn-warning mr-2 w-100"}
         );
+
+        if (this.added) {
+            form_edit.hidden = false;
+            question.hidden= true;
+            answer.hidden = true;
+            button_submit_edit.hidden = false;
+            label_answer.hidden = true;
+            label_question.hidden = true;
+            button_remove.hidden = false;
+            button_submit_edit.value = "Ajouter";
+        }
         
         return {
             "article": article,
@@ -147,6 +174,7 @@ export default class Card extends CoopDom {
             "input_answer": input_answer,
             "input_question": input_question,
             "button_edit": button_edit,
+            "button_submit_edit": button_submit_edit
         };
 
     }
